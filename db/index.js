@@ -3,7 +3,6 @@
 const pg = require('pg');
 
 // setting up the node-postgres driver
-var pg = require('pg');
 var postgresUrl = 'postgres://localhost/twitterdb';
 var client = new pg.Client(postgresUrl);
 
