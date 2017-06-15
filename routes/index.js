@@ -1,7 +1,7 @@
 'use strict';
-var express = require('express');
-var router = express.Router();
-var tweetBank = require('../tweetBank');
+const express = require('express');
+const router = express.Router();
+const tweetBank = require('../tweetBank');
 
 module.exports = function makeRouterWithSockets(io) {
 
