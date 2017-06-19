@@ -13,7 +13,7 @@ module.exports = function makeRouterWithSockets(io) {
     //   tweets: allTheTweets,
     //   showForm: true
     // });
-    client.query('SELECT * FROM tweets', function (err, result) {
+    client.query('SELECT tweets.id AS tweet_id, * FROM tweets', function (err, result) {
       if (err) return next(err); // pass errors to Express
       var tweets = result.rows;
       res.render('index', { title: 'Twitter.js', tweets: tweets, showForm: true });
